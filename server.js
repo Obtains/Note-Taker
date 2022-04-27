@@ -13,8 +13,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 // Router Require Files
-require("./routes/apiRoutes");
-require("./routes/htmlRoutes");
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 // Express Listening
 app.listen(PORT, () => {
